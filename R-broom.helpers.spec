@@ -6,14 +6,15 @@
 # autospec commit: f35655a
 #
 Name     : R-broom.helpers
-Version  : 1.16.0
-Release  : 19
-URL      : https://cran.r-project.org/src/contrib/broom.helpers_1.16.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/broom.helpers_1.16.0.tar.gz
+Version  : 1.17.0
+Release  : 20
+URL      : https://cran.r-project.org/src/contrib/broom.helpers_1.17.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/broom.helpers_1.17.0.tar.gz
 Summary  : Helpers for Model Coefficients Tibbles
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-broom
+Requires: R-cards
 Requires: R-cli
 Requires: R-dplyr
 Requires: R-labelled
@@ -24,6 +25,7 @@ Requires: R-stringr
 Requires: R-tibble
 Requires: R-tidyr
 BuildRequires : R-broom
+BuildRequires : R-cards
 BuildRequires : R-cli
 BuildRequires : R-dplyr
 BuildRequires : R-labelled
@@ -58,10 +60,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1724168334
+export SOURCE_DATE_EPOCH=1724941567
 
 %install
-export SOURCE_DATE_EPOCH=1724168334
+export SOURCE_DATE_EPOCH=1724941567
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
