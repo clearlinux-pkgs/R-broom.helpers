@@ -7,7 +7,7 @@
 #
 Name     : R-broom.helpers
 Version  : 1.17.0
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/broom.helpers_1.17.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/broom.helpers_1.17.0.tar.gz
 Summary  : Helpers for Model Coefficients Tibbles
