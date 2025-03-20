@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : R-broom.helpers
-Version  : 1.19.0
-Release  : 24
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/broom.helpers_1.19.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/broom.helpers_1.19.0.tar.gz
+Version  : 1.20.0
+Release  : 25
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/broom.helpers_1.20.0.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/broom.helpers_1.20.0.tar.gz
 Summary  : Helpers for Model Coefficients Tibbles
 Group    : Development/Tools
 License  : GPL-3.0
@@ -24,6 +24,7 @@ Requires: R-rlang
 Requires: R-stringr
 Requires: R-tibble
 Requires: R-tidyr
+Requires: R-tidyselect
 BuildRequires : R-broom
 BuildRequires : R-cards
 BuildRequires : R-cli
@@ -35,6 +36,7 @@ BuildRequires : R-rlang
 BuildRequires : R-stringr
 BuildRequires : R-tibble
 BuildRequires : R-tidyr
+BuildRequires : R-tidyselect
 BuildRequires : buildreq-R
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -60,10 +62,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740088778
+export SOURCE_DATE_EPOCH=1742468174
 
 %install
-export SOURCE_DATE_EPOCH=1740088778
+export SOURCE_DATE_EPOCH=1742468174
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -129,10 +131,10 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/broom.helpers/data/Rdata.rdb
 /usr/lib64/R/library/broom.helpers/data/Rdata.rds
 /usr/lib64/R/library/broom.helpers/data/Rdata.rdx
+/usr/lib64/R/library/broom.helpers/doc/broom-helpers.R
+/usr/lib64/R/library/broom.helpers/doc/broom-helpers.Rmd
+/usr/lib64/R/library/broom.helpers/doc/broom-helpers.html
 /usr/lib64/R/library/broom.helpers/doc/index.html
-/usr/lib64/R/library/broom.helpers/doc/tidy.R
-/usr/lib64/R/library/broom.helpers/doc/tidy.Rmd
-/usr/lib64/R/library/broom.helpers/doc/tidy.html
 /usr/lib64/R/library/broom.helpers/help/AnIndex
 /usr/lib64/R/library/broom.helpers/help/aliases.rds
 /usr/lib64/R/library/broom.helpers/help/broom.helpers.rdb
@@ -166,6 +168,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/broom.helpers/tests/testthat/test-attach_and_detach.R
 /usr/lib64/R/library/broom.helpers/tests/testthat/test-disambiguate_terms.R
 /usr/lib64/R/library/broom.helpers/tests/testthat/test-get_response_variable.R
+/usr/lib64/R/library/broom.helpers/tests/testthat/test-group_by.R
 /usr/lib64/R/library/broom.helpers/tests/testthat/test-helpers.R
 /usr/lib64/R/library/broom.helpers/tests/testthat/test-identify_variables.R
 /usr/lib64/R/library/broom.helpers/tests/testthat/test-list_higher_order_variables.R
